@@ -1,0 +1,95 @@
+body {
+	padding: 0 20px;
+	background-color: #F5F5F5;
+}
+
+#page-wrapper {
+	width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content {
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5% 
+}
+
+
+/* Header */
+
+#header-logo {
+	display: inline-block;
+	margin-left: 22px; 
+}
+
+#header-logo a {
+	text-decoration: none;
+	color: #0972A5;
+}
+
+#add-feed {
+	display: inline-block;
+	position: relative;
+	left: 483px;
+	top: -8px;
+}
+
+#header button {
+	background-color: #0972A5;
+	color: white;
+}
+
+#header button:hover {
+	background-color: #003147;
+}
+
+
+/* Feed Header */
+
+.btn-group-vertical {
+	position: absolute;
+	top: 10px;
+	right: 8px;
+}
+
+.btn-group-vertical .btn {
+	border: 1px solid gray;
+}
+
+.feed-info {
+	height: 121px;
+	position: relative;
+}
+
+.feed-pic {
+	display: inline-block;
+	background-color: white;
+	width: 96px;
+	height: 96px;
+	vertical-align: middle;
+	float: left;
+	margin-right: 8px;
+}
+
+.feed-pic img {
+	display: inline-block;
+	max-width: 96px;
+	max-height: 96px;
+	margin-top: auto;
+	margin-bottom: auto;
+	vertical-align: middle;
+}
+
+.feed-description {
+	font-size: 12px;
+	width: 680px;
+}
+
+.feed-description h3 {
+	margin-top: 0;
+}
+
+.filter-search {
+	width: 100%;
+}

@@ -1,0 +1,40 @@
+<style type="text/css">
+	#add-feed, #save-tab-order {
+		display:none;
+	}
+</style>
+
+<form enctype="application/x-www-form-urlencoded" method="post" action="/index/edit-feed">
+	<dl class="zend_form">
+		<dt id="name-label">
+			<label for="name" class="required">Enter the name of the RSS feed:</label>
+		</dt>
+		<dd id="name-element">
+			<input type="text" name="name" id="name" value="<?php echo $this->feed->getName(); ?>">
+		</dd>
+		<dt id="ttl-label">
+			<label for="ttl" class="required">Enter the cache TTL of the RSS feed:</label>
+		</dt>
+		<dd id="ttl-element">
+			<input type="text" name="ttl" id="ttl" value="<?php echo $this->feed->getTtl(); ?>">
+		</dd>
+		<dt id="url-label">
+			<label for="url" class="required">Enter the RSS feed url:</label>
+		</dt>
+		<dd id="url-element">
+			<input type="text" name="url" id="url" value="<?php echo $this->feed->getUrl(); ?>">
+		</dd>
+		<dt id="file-label">
+			<label for="file" class="optional">Upload a new image: </label>
+		</dt>
+		<dd id="file-element">
+			<input type="hidden" name="MAX_FILE_SIZE" value="3145728" id="MAX_FILE_SIZE">
+			<input type="file" name="file" id="file">
+		</dd>
+		<dt id="submit-label">&#160;</dt>
+		<dd id="submit-element">
+			<input type="submit" name="submit" id="submit" value="submit">
+			<input type="hidden" name="id" value="<?php echo $this->feed->getId(); ?>"
+		</dd>
+	</dl>
+</form>

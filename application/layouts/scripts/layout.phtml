@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RSS News Feed</title>
+	<?php 
+	echo $this->headLink()
+		->appendStylesheet('/css/bootstrap.min.css')
+		->appendStylesheet('/css/style.css')
+		->appendStylesheet('/css/jquery-ui.min.css')
+		->appendStylesheet('/css/jquery-ui.theme.min.css'); 
+
+	echo $this->headScript()
+		->appendFile('/js/jquery.js')
+		->appendFile('/js/bootstrap.min.js')
+		->appendFile('/js/jquery-ui.min.js')
+		->appendFile('/js/ajax.js')
+		->appendFile('/js/filter-search.js');
+	?>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#tabs").tabs();
+			$( "#sortable" ).sortable();
+		    $( "#sortable" ).disableSelection();
+	    });
+	</script>
+</head>
+<body>
+	<div id="page-wrapper">
+		<div id="header">
+			<div id="header-logo">
+				<a href="/"><h1><b>RSS News Feed</b></h1></a>
+			</div>
+			<div id="add-feed">
+				<a href="/index/add-feed">
+					<button class="btn">Add new RSS feed</button>
+				</a>
+			</div>
+		</div>
+
+		<?php echo $this->layout()->content; ?>
+		
+	</div>
+</body>
+</html>
