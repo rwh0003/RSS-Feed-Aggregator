@@ -47,7 +47,7 @@
                     </thead>
 
                     <!-- Caching the creation and editing of the entries -->
-                    <?php
+                    <?php /*
                     $frontendOptions = array(
                        'lifetime' => $feed['ttl']
                     );
@@ -57,7 +57,7 @@
                     $cache = Zend_Cache::factory('Output', 'File', $frontendOptions, $backendOptions);
 
                     $cacheName = str_replace(' ', '', ucwords($feed['name']));
-                    if(!$cache->start($cacheName)) { ?>
+                    if(!$cache->start($cacheName)) { */?>
 
                     <tbody class="entries" tab="<?php echo $i++; ?>">
                     <?php foreach ($feed['entries'] as $entry) { ?>
@@ -65,10 +65,10 @@
                     <?php } ?>
                     </tbody>
 
-                    <?php $cache->end();
+                    <?php /* $cache->end();
                     } else { 
                         $i++;
-                    } ?>
+                    } */?>
                 </table>
             </div>
         <?php } ?>
